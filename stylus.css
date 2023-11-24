@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  background-color: hsl(226, 43%, 10%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.container .user {
+  background-color: hsl(235, 46%, 20%);
+  display: grid;
+  width: 240px;
+  grid-row-start: span 2;
+  border-radius: 15px;
+}
+
+h1,
+h2 {
+  font-size: 45px;
+}
+
+p {
+  color: hsl(236, 100%, 87%);
+}
+
+.container .user-image {
+  background-color: hsl(246, 80%, 60%);
+  padding: 0px 30px;
+  padding-bottom: 100px;
+  border-radius: 15px;
+}
+
+.container .user img {
+  width: 40%;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 20px 0px;
+}
+
+.container .user .user-times {
+  display: grid;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  color: hsl(236, 100%, 87%);
+}
+
+.container .user .user-times p {
+  cursor: pointer;
+  transition: 0.7s all;
+}
+
+.container .user .user-times p:hover {
+  color: white;
+}
+
+/*----------------WORK--------------------*/
+
+.work .work-image {
+  background-color: hsl(15, 100%, 70%);
+}
+
+/*-----------------PLAY-------------------*/
+
+.play .play-image {
+  background-color: hsl(195, 74%, 62%);
+}
+
+/*----------------STUDY--------------------*/
+
+.study .study-image {
+  background-color: hsl(348, 100%, 68%);
+}
+
+/*--------------EXERCISE-------------------*/
+
+.exercise .exercise-image {
+  background-color: hsl(145, 58%, 55%);
+}
+
+/*-----------------SOCIAL-------------------*/
+
+.social .social-image {
+  background-color: hsl(264, 64%, 52%);
+}
+
+/*--------------SELF CARE----------------------*/
+
+.selfcare .selfcare-image {
+  background-color: hsl(43, 84%, 65%);
+}
+
+/*---------------------------------------*/
+
+/*---------------------------------------*/
+.work-image,
+.play-image,
+.study-image,
+.exercise-image,
+.social-image,
+.selfcare-image {
+  border-radius: 15px;
+  margin-bottom: -25px;
+  height: 80px;
+  display: flex;
+  justify-content: end;
+  padding-right: 15px;
+}
+
+.work-content,
+.play-content,
+.study-content,
+.exercise-content,
+.social-content,
+.selfcare-content {
+  background-color: hsl(235, 46%, 20%);
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.work-content:hover,
+.play-content:hover,
+.study-content:hover,
+.exercise-content:hover,
+.social-content:hover,
+.selfcare-content:hover {
+  background-color: hsl(235, 46%, 35%);
+  cursor: pointer;
+}
+
+.work-title,
+.play-title,
+.study-title,
+.exercise-title,
+.social-title,
+.selfcare-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work-data,
+.play-data,
+.study-data,
+.exercise-data,
+.social-data,
+.selfcare-data {
+  padding: 20px 0px;
+}
+
+/*--------------MEDIA QUERIES----------------------*/
+
+@media screen and (max-width: 1050px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container .user {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: self-start;
+    padding: 20px;
+  }
+
+  .container .user {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+/*----mobile design-----*/
+@media screen and (max-width: 559px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: self-start;
+    padding: 20px;
+  }
+
+  .container .user {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+  .container .user-image {
+    width: 340px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+
+  .container .user img {
+    width: 80%;
+    margin: 0px 0px;
+  }
+
+  .container .user .user-times {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+
+  /*----DATA-----*/
+
+  h2 {
+    font-size: 40px;
+  }
+  .work-data,
+  .play-data,
+  .study-data,
+  .exercise-data,
+  .social-data,
+  .selfcare-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+  }
+}
